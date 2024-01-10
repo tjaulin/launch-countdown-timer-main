@@ -1,0 +1,104 @@
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variabble */
+:root {
+    --main-color: hsl(237, 18%, 59%); /*Grayish blue*/
+    --secondary-color: hsl(345, 95%, 68%); /*Soft Red*/
+    --white-color:  hsl(0, 0%, 100%); /* White */
+    --main-bg-color:  hsl(235, 16%, 14%); /* Very dark blue */
+    --secondary-bg-color:  hsl(236, 21%, 26%); /* Dark desaturated blue */
+    --tertiarty-bg-color:  hsl(234, 17%, 12%); /* Very dark (mostly black) blue */
+}
+/* General Style */
+body {
+    font-family: 'Red Hat Text', sans-serif;
+    background: url('../images/bg-stars.svg') no-repeat top/contain, 
+    url('../images/pattern-hills.svg') no-repeat center bottom/contain;
+    background-color: var(--main-bg-color);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    color: var(--white-color);
+    font-size: 14px;
+}
+
+/* Advanced Style */
+#days, #hours, #minutes, #seconds{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content p {
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+    margin: 150px 0;
+}
+
+.timer {
+    display: flex;
+    gap: 30px;
+}
+
+span.label {
+    margin-top: 15px;
+    color: var(--main-color);
+    letter-spacing: 5px;
+}
+
+.number {
+    position: relative;
+    width: 140px;
+    height: 110px;
+    background: linear-gradient(to bottom, #2c2d44 50%, var(--secondary-bg-color) 50%);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: var(--secondary-color); */
+    font-size: 70px;
+}
+
+.span-number {
+    background: linear-gradient(to bottom, #d54f70 50%, var(--secondary-color) 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.number:before, .number:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    background-color: var(--main-bg-color);
+}
+.number:before {
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+.number:after {
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+/* Footer */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width: 375px) {
+    body {
+        background: url('../images/bg-stars.svg') no-repeat top/contain, 
+        url('../images/pattern-hills.svg') no-repeat center bottom/1000px;
+        background-color: var(--main-bg-color);
+        font-size: 14px;
+    }
+}
