@@ -11,27 +11,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
+  <!-- Moment.js -->
+  <script src="js/moment.min.js"></script>
+  <script src="js/moment-with-locales.min.js"></script>
 </head>
 <body>
 
   <div class="content">
     <p>We're launching soon</p>
-    <div class="timer">
+    <div id="countdown-container" class="timer">
       <div id="days" class="div-number">
-        <div class="days-number number"><span class="span-number">08</span></div>
+        <div class="days-number number"><span id="days-span-number" class="span-number">08</span></div>
         <span class="label">DAYS</span>
       </div>
       <div id="hours" class="div-number">
-        <div class="hours-number number"><span class="span-number">23</span></div>
+        <div class="hours-number number"><span id="hours-span-number" class="span-number">23</span></div>
         <span class="label">HOURS</span>     
       </div>
       <div id="minutes" class="div-number">
-        <div class="minutes-number number"><span class="span-number">55</span></div>
+        <div class="minutes-number number"><span id="minutes-span-number" class="span-number">55</span></div>
         <span class="label">MINUTES</span>
       </div>
       
       <div id="seconds" class="div-number">
-        <div class="seconds-number number"><span class="span-number">41</span></div>
+        <div class="seconds-number number"><span id="seconds-span-number" class="span-number">41</span></div>
         <span class="label">SECONDS</span>
       </div>
     </div>

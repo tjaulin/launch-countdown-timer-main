@@ -44,6 +44,7 @@ body {
 
 .timer {
     display: flex;
+    justify-content: center;
     gap: 30px;
 }
 
@@ -124,6 +125,19 @@ span.label {
     }
 }
 
-@media screen and (max-width: 375px) {
-    
+@media screen and (max-width: 425px) {
+    .timer {
+        gap: 15px;
+    }
+
+    .number {
+        width: 70px;
+        height: 60px;
+        font-size: 30px;
+    }
+
+    span.label {
+        font-size: 8px;
+        letter-spacing: 3px;
+    }
 }
