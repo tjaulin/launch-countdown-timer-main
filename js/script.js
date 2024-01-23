@@ -31,3 +31,8 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('seconds-span-number').textContent = duration.seconds();
     }
 });
+
+if(window.innerWidth <= 425) {
+    const message = document.querySelector("#message");
+    message.innerHTML = "We're launching </br> soon"
+}
